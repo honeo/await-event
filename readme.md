@@ -1,6 +1,6 @@
 # await-event
 [honeo/await-event](https://github.com/honeo/await-event)  
-[await-event](https://www.npmjs.com/package/await-event)
+[@honeo/await-event](https://www.npmjs.com/package/@honeo/await-event)
 
 ## なにこれ
 promiseを返し、イベントを一度だけ掴んでresolve(event)する。  

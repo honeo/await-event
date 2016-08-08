@@ -1,7 +1,7 @@
 {
-  "name": "await-event",
+  "name": "@honeo/await-event",
   "version": "1.0.0",
-  "description": "[honeo/await-event](https://github.com/honeo/await-event)  \r [await-event](https://www.npmjs.com/package/await-event)",
+  "description": "イベントの発生を待つやつ",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
