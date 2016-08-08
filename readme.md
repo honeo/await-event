@@ -8,12 +8,12 @@ Chrome拡張機能とその互換APIでも動く（といいなと思ってい�
 
 ## 使い方
 ```sh
-$ npm i -S await-event
+$ npm i -S @honeo/await-event
 ```
 
 ### Browser (EventTarget)
 ```js
-import AwaitEvent from 'await-event';
+import AwaitEvent from '@honeo/await-event';
 
 (async function(){
 	const event = await AwaitEvent(document.body, 'click', false);
@@ -25,7 +25,7 @@ document.body.click();
 
 ### Node.js (EventEmitter)
 ```js
-import AwaitEvent from 'await-event';
+import AwaitEvent from '@honeo/await-event';
 import {EventEmitter} from 'events';
 
 const eventemitter = new EventEmitter();
