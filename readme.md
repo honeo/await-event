@@ -3,8 +3,8 @@
 [@honeo/await-event](https://www.npmjs.com/package/@honeo/await-event)
 
 ## なにこれ
-promiseを返し、イベントを一度だけ掴んでresolve(event)する。  
-Chrome拡張機能とその互換APIでも動けばいいなと思っている。
+Promiseインスタンスを返し、イベントを一度だけ掴んでresolve(event)する。  
+Chrome拡張機能とその互換APIでも動く（といいなと思っている）。
 
 ## 使い方
 ```sh

@@ -7,9 +7,6 @@ import is from '@honeo/type-check';
 		EventEmitterとChrome拡張機能はremoveListener
 */
 function AwaitEvent(target, type, ...args){
-	if( !is.obj(target) || !is.str(type) ){
-		throw new TypeError('invalid argument');
-	}
 
 	// doだとコケたから取りあえず即時関数
 	const [add, remove] = (function(){
@@ -18,9 +15,13 @@ function AwaitEvent(target, type, ...args){
 		}else if( is.func(target.addListener, target.removeListener) ){
 			return ['addListener', 'removeListener'];
 		}else{
-			throw new TypeError('invalid argument');
+			throw new TypeError('invalid argument1');
 		}
 	}());
+
+	if( !is.str(type) ){
+		throw new TypeError('invalid argument2');
+	}
 
 	return new Promise( (resolve, reject)=>{
 		// resolveして解除、resolveを参照するためここに置く
