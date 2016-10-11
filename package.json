@@ -1,6 +1,6 @@
 {
   "name": "@honeo/await-event",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "イベントの発生を待つやつ",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "honeo",
   "license": "MIT",
   "dependencies": {
-    "@honeo/type-check": "^1.4.0"
+    "@honeo/type-check": "^2.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",

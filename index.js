@@ -1,5 +1,5 @@
 // Modules
-import is from '@honeo/type-check';
+import {is, not} from '@honeo/type-check';
 
 /*
 	メモ
@@ -15,12 +15,12 @@ function AwaitEvent(target, type, ...args){
 		}else if( is.func(target.addListener, target.removeListener) ){
 			return ['addListener', 'removeListener'];
 		}else{
-			throw new TypeError('invalid argument1');
+			throw new TypeError('invalid argument: 1');
 		}
 	}());
 
-	if( !is.str(type) ){
-		throw new TypeError('invalid argument2');
+	if( not.str(type) ){
+		throw new TypeError('invalid argument: 2');
 	}
 
 	return new Promise( (resolve, reject)=>{
