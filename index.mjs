@@ -1,10 +1,4 @@
 /*
-	メモ
-		ブラウザのDOMイベント解除メソッドはremoveEventListener
-		EventEmitterとChrome拡張機能はremoveListener
-*/
-
-/*
 	本体
 		引数
 			1: eventtarget or eventemitter

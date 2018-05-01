@@ -15,6 +15,13 @@ $ npm i @honeo/await-event
 ```js
 import AwaitEvent from '@honeo/await-event';
 
+// or Dynamic import, CDN
+const AwaitEvent = await import('https://cdn.rawgit.com/honeo/await-event/master/index.mjs').then( (mod)=>{
+	return mod.default;
+});
+
+
+
 (async function(){
 	const event = await AwaitEvent(document.body, 'click', false);
 	console.log(event.type); // "click"
