@@ -1,6 +1,6 @@
 {
   "name": "@honeo/await-event",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "イベントの発生を待つやつ",
   "main": "index.mjs",
   "scripts": {
