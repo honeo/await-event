@@ -1,14 +1,14 @@
 # await-event
-[honeo/await-event](https://github.com/honeo/await-event)  
-[@honeo/await-event](https://www.npmjs.com/package/@honeo/await-event)
+* [honeo/await-event](https://github.com/honeo/await-event)  
+* [@honeo/await-event](https://www.npmjs.com/package/@honeo/await-event)
 
 ## なにこれ
 Promiseインスタンスを返し、イベントを一度だけ掴んでresolve(event)する。  
-Chrome拡張機能とその互換APIでも動く（といいなと思っている）。
+ブラウザ拡張機能のAPIでも動く（といいなと思っている）。
 
 ## 使い方
 ```sh
-$ npm i -S @honeo/await-event
+$ npm i @honeo/await-event
 ```
 
 ### Browser (EventTarget)

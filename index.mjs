@@ -1,25 +1,32 @@
-// Modules
-import {is, not} from '@honeo/type-check';
-
 /*
 	メモ
-		ブラウザのDOMイベントはremoveEventListener
+		ブラウザのDOMイベント解除メソッドはremoveEventListener
 		EventEmitterとChrome拡張機能はremoveListener
+*/
+
+/*
+	本体
+		引数
+			1: eventtarget or eventemitter
+			2: string
+				監視するイベント名
+			3~: any
+				そのままイベント登録関数に渡されるoptions
 */
 function AwaitEvent(target, type, ...args){
 
-	// doだとコケたから取りあえず即時関数
+	// 使用する関数名の割り出し
 	const [add, remove] = (function(){
-		if( is.func(target.addEventListener, target.removeEventListener) ){
+		if( isFunc(target.addEventListener, target.removeEventListener) ){
 			return ['addEventListener', 'removeEventListener'];
-		}else if( is.func(target.addListener, target.removeListener) ){
+		}else if( isFunc(target.addListener, target.removeListener) ){
 			return ['addListener', 'removeListener'];
 		}else{
 			throw new TypeError('invalid argument: 1');
 		}
 	}());
 
-	if( not.str(type) ){
+	if( typeof type!=='string' ){
 		throw new TypeError('invalid argument: 2');
 	}
 
@@ -30,6 +37,12 @@ function AwaitEvent(target, type, ...args){
 			this[remove](type, listener);
 		}
 		target[add](type, listener, ...args);
+	});
+}
+
+function isFunc(...args){
+	return args.every( (arg)=>{
+		return typeof arg==='function';
 	});
 }
 

@@ -2,22 +2,17 @@
   "name": "@honeo/await-event",
   "version": "1.0.3",
   "description": "イベントの発生を待つやつ",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node --experimental-modules test/index.mjs"
   },
   "author": "honeo",
   "license": "MIT",
-  "dependencies": {
-    "@honeo/type-check": "^2.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
-    "babel-plugin-syntax-async-functions": "^6.13.0",
-    "babel-plugin-syntax-do-expressions": "^6.13.0",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-es2016": "^6.11.3",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.5.0",
     "jsdom": "^9.4.1"
   },

@@ -1,16 +1,24 @@
-// Modules
-import AwaitEvent from '../';
-import {EventEmitter} from 'events';
+console.log('await-event: test');
 
-console.log('await-event: cases.js');
+// Modules
+import JSDOM from 'jsdom';
+import AwaitEvent from '../';
+import events from 'events';
+
+// jsdom + set
+global.document = JSDOM.jsdom('hogehoge');
+global.head = document.head;
+global.window = document.defaultView;
+
 
 // var
+const {EventEmitter} = events;
 const eventemitter = new EventEmitter();
 
 /*
 	EventEmitterとEventTargetのそれぞれ
 */
-async function Cases(){
+async function main(){
 
 	setTimeout( ()=>{
 		eventemitter.emit('hoge', {fuga: 'piyo'});
@@ -35,4 +43,9 @@ async function Cases(){
 	return true;
 }
 
-export default Cases;
+main().then( (arg)=>{
+	console.log('success');
+}).catch( (error)=>{
+	console.log('failed');
+	throw new Error(error);
+});
