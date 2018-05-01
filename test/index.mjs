@@ -4,12 +4,8 @@ console.log('await-event: test');
 import JSDOM from 'jsdom';
 import AwaitEvent from '../';
 import events from 'events';
-
-// jsdom + set
-global.document = JSDOM.jsdom('hogehoge');
-global.head = document.head;
-global.window = document.defaultView;
-
+import browserEnv from 'browser-env';
+browserEnv(); // setup
 
 // var
 const {EventEmitter} = events;
