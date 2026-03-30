@@ -16,7 +16,7 @@ $ npm i @honeo/await-event
 import AwaitEvent from '@honeo/await-event';
 
 // or Dynamic import, CDN
-const AwaitEvent = await import('https://cdn.rawgit.com/honeo/await-event/master/index.mjs').then( (mod)=>{
+const AwaitEvent = await import('https://cdn.jsdelivr.net/npm/@honeo/await-event/index.mjs').then( (mod)=>{
 	return mod.default;
 });
 
